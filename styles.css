@@ -45,7 +45,25 @@ button {
     text-align: center;
     font-family: 'Rubik', sans-serif;
 }
+li{
+    background-color: #3f3f3f;
+    text-align: center;
+    font-family: 'Rubik', sans-serif;
+    border-radius: 8px;
+    font-size: 20px;
+    margin: 1rem;
+    display: inline-block;
+    padding: 1rem;
+}
 
+#shopping-list{
+    list-style-type: none;
+    color: white;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    
+}
 
 
 

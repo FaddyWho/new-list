@@ -1,5 +1,5 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.4.0/firebase-app.js";
-import { getDatabase, ref, push } from 'https://www.gstatic.com/firebasejs/10.4.0/firebase-database.js'
+import { getDatabase, ref, push, onValue } from 'https://www.gstatic.com/firebasejs/10.4.0/firebase-database.js'
 
 
 const appSettings = {
@@ -22,17 +22,42 @@ const appSettings = {
   const app = initializeApp(appSettings);
   const db = getDatabase(app);
   const moviesInDB = ref(db, "movies")
+  const thingsInDB = ref(db, "things")
 
 
 
 const inputFieldEl = document.getElementById("input-field")
 const addButtonEl = document.getElementById("add-button")
+const listViewEl = document.getElementById("shopping-list")
 
-addButtonEl.addEventListener("click", function() {
-    let inputValue = inputFieldEl.value
-    
+onValue(thingsInDB, function(snapshot){
+    let thingsArr = Object.values(snapshot.val())
 
-    push(moviesInDB, inputValue)
+    clear(listViewEl)
 
-    console.log(inputValue)
+    for (let i=0; i < thingsArr.length;i++){
+        addItem(thingsArr[i])
+    }
 })
+
+
+
+// addButtonEl.addEventListener("click", function() {
+//     let inputValue = inputFieldEl.value
+    
+//     push(moviesInDB, inputValue);
+
+//     addItem(inputValue)
+    
+//     clear();
+// })
+
+function clear(stuff){
+    stuff.value = ""
+}
+
+function addItem(A){
+    listViewEl.innerHTML += `<li>${A}</li>`;
+
+}
+
