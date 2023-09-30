@@ -12,7 +12,7 @@ html, body {
 #container{
     display: flex;
     flex-direction: column;
-    max-width: 320px;
+    max-width: 80%;
     margin: 10rem auto;
 }
 
@@ -29,7 +29,7 @@ input {
     border: 0;
     padding: 15px;
     border-radius: 8px;
-    font-size: 20px;
+    font-size: 60px;
     text-align: center;
     font-family: 'Rubik', sans-serif;
     margin: 1rem 0;
@@ -37,31 +37,44 @@ input {
 
 button {
     color: #FDFDFD;
-    background-color: #AC485A;
+    background-color: #48acac;
     border: 0;
     padding: 15px;
     border-radius: 8px;
-    font-size: 20px;
+    font-size: 50px;
     text-align: center;
     font-family: 'Rubik', sans-serif;
 }
+
 li{
+
     background-color: #3f3f3f;
     text-align: center;
     font-family: 'Rubik', sans-serif;
     border-radius: 8px;
-    font-size: 20px;
-    margin: 1rem;
+    font-size: 40px;
     display: inline-block;
     padding: 1rem;
+    flex-grow: 1;
+}
+
+li:hover{
+    color: black;
+    background-color: #e76363;
+    cursor: pointer;
 }
 
 #shopping-list{
+    display: flex;
+    flex-wrap: wrap;
     list-style-type: none;
     color: white;
     text-align: center;
-    margin: 0;
+    margin-top: 3rem;
     padding: 0;
+    gap: 40px 20px;
+    font-size: 40px;
+    
     
 }
 
@@ -70,7 +83,7 @@ li{
 
 
 button:hover {
-    background-color: #AC485A;
+    background-color: #15444c;
     box-shadow: 5px 5px 5px rgba(27, 27, 27, 0.364) inset;
     text-shadow: 1px 1px 5px black;
 }
