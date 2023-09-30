@@ -13,13 +13,12 @@ html, body {
     display: flex;
     flex-direction: column;
     max-width: 80%;
-    margin: 10rem auto;
+    margin: 5rem auto;
 }
 
 img{
-    width: 200px;
-    margin: 0 auto;
-    filter: invert();
+    width: 300px;
+    margin: 0 auto 4rem auto;
 }
 
 
