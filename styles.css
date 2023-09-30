@@ -36,7 +36,7 @@ input {
 
 button {
     color: #FDFDFD;
-    background-color: #48acac;
+    background-color: #d5c53c;
     border: 0;
     padding: 15px;
     border-radius: 8px;
@@ -45,13 +45,19 @@ button {
     font-family: 'Rubik', sans-serif;
 }
 
+button:hover {
+    background-color: #4c4915;
+    box-shadow: 5px 5px 5px rgba(27, 27, 27, 0.364) inset;
+    text-shadow: 1px 1px 5px black;
+}
+
 li{
 
     background-color: #3f3f3f;
     text-align: center;
     font-family: 'Rubik', sans-serif;
     border-radius: 8px;
-    font-size: 40px;
+    font-size: 30px;
     display: inline-block;
     padding: 1rem;
     flex-grow: 1;
@@ -80,9 +86,3 @@ li:hover{
 
 
 
-
-button:hover {
-    background-color: #15444c;
-    box-shadow: 5px 5px 5px rgba(27, 27, 27, 0.364) inset;
-    text-shadow: 1px 1px 5px black;
-}
